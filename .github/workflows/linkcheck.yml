@@ -1,9 +1,14 @@
+# Check all links in markdown files
+name: Linkcheck
+
 on:
   push:
     paths:
     - '*.md'
-    - '/docs/*'
-name: Testing linkcheck
+    - '/documentation/*.md'
+    - '/installation/*.md'
+    - '/tutorials/*.md'
+
 jobs:
   markdown-link-check:
     runs-on: ubuntu-latest
