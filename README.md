@@ -4,6 +4,6 @@
 
 [Duck Duck Go](https://duckduckgo.com).
 
-[Duck Duck Goo](https://duckduckgoooo.com).
+[Google](https://www.google.ie).
 
 Hii
