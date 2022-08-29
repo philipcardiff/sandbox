@@ -7,20 +7,19 @@ on:
     types: [completed]
 
 jobs:
-  on-success:
-    docker:
-      runs-on: ubuntu-latest
-      steps:
-        -
-          name: Login to DockerHub
-          uses: docker/login-action@v2
-          with:
-            username: ${{ secrets.DOCKERHUB_USERNAME }}
-            password: ${{ secrets.DOCKERHUB_TOKEN }}
-        -
-          name: Build and push a test image
-          uses: docker/build-push-action@v3
-          with:
-            push: true
-            tags: solids4foam/sandbox:latest
-            file: Dockerfile.sandbox
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Build and push a test image
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: solids4foam/sandbox:latest
+          file: Dockerfile.sandbox
