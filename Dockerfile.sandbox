@@ -1,0 +1,16 @@
+################################################################################
+# Dockerfile for testing
+# philip.cardiff@ucd.ie, Aug 2022
+################################################################################
+
+# Set the base image
+FROM philippic/openfoam-v2012-ubuntu20.04:latest
+
+# File Author / Maintainer
+MAINTAINER Philip Cardiff <philip.cardiff@ucd.ie>
+
+# Change default shell to bash
+SHELL ["/bin/bash", "-c"]
+
+# Add repo to root
+COPY . /
