@@ -24,3 +24,19 @@ jobs:
       - name: Alltest
         shell: bash -l {0}
         run: echo "Test done"
+
+  build-and-test-job2:
+    name: Simple build and test 2
+    runs-on: ubuntu-latest
+    container:
+      image: philippic/openfoam-v2012-ubuntu20.04:latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Allwmake
+        shell: bash -l {0}
+        run: echo "Build 2 done"
+
+      - name: Alltest
+        shell: bash -l {0}
+        run: echo "Test 2 done"
